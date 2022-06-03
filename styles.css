@@ -3,6 +3,10 @@ body {
     color: azure;
 }
 
+.container {
+    max-width: 1400px;
+}
+
 .nav-icons {
     color: aliceblue;
     font-size: 20px;
