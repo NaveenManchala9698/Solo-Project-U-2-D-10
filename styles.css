@@ -19,3 +19,32 @@ body {
 .selected-icons {
     font-size: 30px;
 }
+
+footer {
+    width: 800px;
+}
+
+
+.footer-icons {
+    font-size: 30px;
+    color: rgb(146, 146, 146);
+}
+
+.footer-text {
+    color: rgb(175, 174, 174);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+ul li{
+    list-style: none;
+    color: rgb(146, 146, 146);;
+}
+
+.service-btn {
+    background-color: #202020;
+    color: rgb(146, 146, 146);
+    border: 1px solid rgb(146, 146, 146);
+};
+
+

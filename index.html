@@ -20,108 +20,301 @@
   </head>
   <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark px-0">
-          <a class="navbar-brand" href="#"
-            ><img src="./assets/netflix_logo.png" alt="Netflix logo" height="46"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#"
-                  >Home <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">TV Shows</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#"> Movies </a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#"> Recently Added </a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">My List</a>
-              </li>
-            </ul>
-            <div>
-              <i class="bi bi-search nav-icons mx-3 align-middle"></i>
-              <img
-                class="nav-icons mx-2"
-                src="./assets/kids_icon.png"
-                alt="kids_icon"
-                width="32"
-                height="32"
-              />
-              <i class="bi bi-bell-fill nav-icons mx-2 align-middle"></i>
-              <div class="dropdown d-inline-block">
-                <button
-                  class="btn dropdown-toggle text-white"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="./assets/avatar.png"
-                    alt="kids_icon"
-                    width="35"
-                    height="35"
-                  />
-                </button>
-                <div
-                  class="dropdown-menu dropdown-menu-right"
-                  aria-labelledby="dropdownMenuButton"
-                >
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+      <nav class="navbar navbar-expand-lg navbar-dark px-0">
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/netflix_logo.png" alt="Netflix logo" height="46"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">TV Shows</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> Movies </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> Recently Added </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">My List</a>
+            </li>
+          </ul>
+          <div>
+            <i class="bi bi-search nav-icons mx-3 align-middle"></i>
+            <img
+              class="nav-icons mx-2"
+              src="./assets/kids_icon.png"
+              alt="kids_icon"
+              width="32"
+              height="32"
+            />
+            <i class="bi bi-bell-fill nav-icons mx-2 align-middle"></i>
+            <div class="dropdown d-inline-block">
+              <button
+                class="btn dropdown-toggle text-white"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="./assets/avatar.png"
+                  alt="kids_icon"
+                  width="35"
+                  height="35"
+                />
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container mb-4">
+      <div class="d-flex ml-2 align-items-center">
+        <h1>TV Shows</h1>
+        <div class="dropdown d-inline-block mx-4">
+          <button
+            class="btn dropdown-toggle text-white border"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Genres
+          </button>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+
+        <div class="ml-auto mr-2">
+          <i class="bi bi-list selected-icons"></i>
+          <i class="bi bi-filter-square selected-icons"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-5">
+      <h3>Trending Now</h3>
+      <div class="row mx-n1 mt-3">
+        <div class="col px-1">
+          <img
+            src="./assets/media/media0.webp"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+          <!-- <img
+            src="./logo/prime.svg"
+            class="New-Episode-badge"
+            alt="New Episode badge"
+          /> -->
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media1.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media2.webp"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+          <!-- <img
+            src="./logo/prime.svg"
+            class="New-Episode-badge"
+            alt="New Episode badge"
+          /> -->
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media3.webp"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media4.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+          <!-- <img
+            src="./logo/prime.svg"
+            class="New-Episode-badge"
+            alt="New Episode badge"
+          /> -->
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media5.webp"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-5">
+      <h3>Watch it Again</h3>
+      <div class="row mx-n1 mt-3">
+        <div class="col px-1">
+          <img
+            src="./assets/media/media7.webp"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media8.webp"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media9.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media10.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media11.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media12.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+      </div>
     </div>
 
     <div class="container">
-        <div class="d-flex ml-2 align-items-center">
-          <h1>TV Shows</h1>
-          <div class="dropdown d-inline-block mx-4">
-            <button
-              class="btn dropdown-toggle text-white border"
-              type="button"
-              id="dropdownMenuButton"
-              data-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Genres
-            </button>
-            <div
-              class="dropdown-menu dropdown-menu-right"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+      <h3>New Releases</h3>
+      <div class="row mx-n1 mt-3">
+        <div class="col px-1">
+          <img
+            src="./assets/media/media6.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media13.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media14.webp"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media15.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media16.webp"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+        <div class="col px-1">
+          <img
+            src="./assets/media/media17.jpg"
+            alt=""
+            class="img-fluid w-100 rounded"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <footer>
+        <div class="container mt-4">
+          <div class="row mb-2">
+            <div class="col text-left">
+              <i class="bi bi-facebook footer-icons pr-3"></i>
+              <i class="bi bi-instagram footer-icons pr-3"></i>
+              <i class="bi bi-twitter footer-icons pr-3"></i>
+              <i class="bi bi-youtube footer-icons pr-3"></i>
             </div>
           </div>
-    
-          <div class="ml-auto mr-2">
-            <i class="bi bi-list selected-icons"></i>
-            <i class="bi bi-filter-square selected-icons"></i>
+          <div class="row mb-2">
+            <div class="col-3 text-left footer-text">Audio and Subtitles</div>
+            <div class="col-3 text-left footer-text">Audio Description</div>
+            <div class="col-3 text-left footer-text">Help Center</div>
+            <div class="col-3 text-left footer-text">Gift Cards</div>
+            <div class="col-3 text-left footer-text">Media Center</div>
+            <div class="col-3 text-left footer-text">Investor Relations</div>
+            <div class="col-3 text-left footer-text">Jobs</div>
+            <div class="col-3 text-left footer-text">Terms of Use</div>
+            <div class="col-3 text-left footer-text">Privacy</div>
+            <div class="col-3 text-left footer-text">Legal Notices</div>
+            <div class="col-3 text-left footer-text">Cookie Preferences</div>
+            <div class="col-3 text-left footer-text">Corporate Information</div>
+            <div class="col-3 text-left footer-text">Contact Us</div>
+          </div>
+          <button class="service-btn mb-3">Service Code</button>
+          <div class="footer-text">
+            © 1997-2019, Netflix, Inc. {i.duddsvjfdgefd}
+          </div>
         </div>
+      </footer>
     </div>
 
     <script
