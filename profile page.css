@@ -92,6 +92,10 @@ width: 20%;
 height: 40px;
 }
 
+.save-btn:hover {
+    transform: translateZ(20px);
+}
+
 .cancel-btn {
 width: 30%;
 height: 40px;
