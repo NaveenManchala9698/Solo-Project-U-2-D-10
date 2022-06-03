@@ -1,0 +1,17 @@
+body {
+    background-color: #202020;
+    color: azure;
+}
+
+.nav-icons {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+#selected {
+    display: flex;
+}
+
+.selected-icons {
+    font-size: 30px;
+}
