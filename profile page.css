@@ -93,7 +93,8 @@ height: 40px;
 }
 
 .save-btn:hover {
-    transform: translateZ(20px);
+    background-color: rgb(94, 94, 94);
+    color: azure;
 }
 
 .cancel-btn {
