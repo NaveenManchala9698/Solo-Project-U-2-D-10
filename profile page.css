@@ -1,0 +1,112 @@
+body {
+    background-color: #202020;
+    color: azure;
+}
+
+.netflix-logo {
+    width: 120px;
+    height: 60px;
+    margin-top: 15px;
+}
+
+.container {
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 1px;
+    font-weight: 400;
+    font-size: 60px;
+}
+
+h4 {
+    font-weight: 450;
+    font-size: 20px;
+}
+
+hr {
+    background-color: gray;
+    margin-top: 2px;
+}
+
+img {
+    cursor: pointer;
+}
+
+img:hover {
+    opacity: 0.5;
+}
+
+.edit-badge {
+    position: absolute;
+    cursor: pointer;
+    left: 1.5rem;
+    top: 8rem;
+    font-size: 20px;
+}
+
+.profile-pic {
+    height: 160px;
+    width: 160px;
+}
+
+input {
+    width: 90%;
+    background-color: gray;
+    color: azure;
+    height: 45px;
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    margin-left: 2rem;
+}
+
+.maturity-btn {
+    color: azure;
+    background-color: rgb(85, 84, 84);
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 60%;
+}
+
+.edit-btn {
+    background-color: #202020;
+    color: gray;
+    border: 2px solid gray;
+    width: 80px;
+    height: 40px
+}
+
+.maturity-btn p {
+    font-weight: 500;
+}
+
+input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+}
+
+.save-btn {
+width: 20%;
+height: 40px;
+}
+
+.cancel-btn {
+width: 30%;
+height: 40px;
+color: gray;
+border: 2px solid gray;
+background: none;
+letter-spacing: 3px;
+
+}
+
+.delete-btn {
+width: 40%;
+height: 40px;
+color: gray;
+border: 2px solid gray;
+background: none;
+letter-spacing: 3px;
+}
