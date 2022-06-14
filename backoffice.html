@@ -105,7 +105,9 @@
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
-          <button type="submit" class="btn btn-danger" onclick="deleteMovie()">Delete</button>
+          <button type="submit" class="btn btn-danger" onclick="deleteMovie()">
+            Delete
+          </button>
         </form>
       </div>
     </div>
@@ -117,6 +119,7 @@
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
   <script>
+
     const attachMovies = async (event) => {
       try {
         event.preventDefault();
@@ -126,18 +129,17 @@
           description: document.getElementById("description").value,
           category: document.getElementById("category").value,
           imageUrl: document.getElementById("imageUrl").value,
-        }
-
+        };
 
         const options = {
           method: "POST",
           body: JSON.stringify(movies),
           headers: {
             "Content-Type": "application/json",
-            "Authorization":
+            Authorization:
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmEzNDM5MzdmZmQ0OTAwMTU4YTdhOWMiLCJpYXQiOjE2NTUyMDM2MTMsImV4cCI6MTY1NjQxMzIxM30.ozVgl19lKNBmQ3TeP-LfrHL4ak2PqE9Lj3nhDMHEg0k",
           },
-        }
+        };
         const response = await fetch(
           "https://striveschool-api.herokuapp.com/api/movies",
           options
@@ -147,9 +149,30 @@
       }
     };
 
-    const deleteMovie = async () => {
 
-    }
+    const eventId = new URLSearchParams(window.location.search).get("movieId")
+
+    const deleteMovie = async (event) => {
+      try {
+        const options = {
+          method: "DELETE",
+
+          headers: {
+            "Content-Type": "application/json",
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmEzNDM5MzdmZmQ0OTAwMTU4YTdhOWMiLCJpYXQiOjE2NTUyMDM2MTMsImV4cCI6MTY1NjQxMzIxM30.ozVgl19lKNBmQ3TeP-LfrHL4ak2PqE9Lj3nhDMHEg0k",
+          },
+        };
+
+        const res = await fetch(
+          "https://striveschool-api.herokuapp.com/api/movies" + movie._id,
+          options
+        );
+      }
+      catch (error) {
+        console.log(error);
+      }
+    };
   </script>
 </body>
 
