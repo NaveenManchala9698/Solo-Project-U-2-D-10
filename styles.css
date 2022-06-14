@@ -44,15 +44,16 @@ footer {
     font-size: 14px;
 }
 
-ul li{
+ul li {
     list-style: none;
-    color: rgb(146, 146, 146);;
+    color: rgb(146, 146, 146);
+    ;
 }
 
 .service-btn {
     background-color: #202020;
     color: rgb(146, 146, 146);
     border: 1px solid rgb(146, 146, 146);
-};
+}
 
-
+;
