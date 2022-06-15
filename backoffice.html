@@ -101,7 +101,7 @@
           </div>
           <div class="form-group">
             <label for="imageUrl">Image URL</label>
-            <input id="imageUrl" type="text" class="form-control" placeholder="Image Url.." />
+            <input id="imageUrl" type="url" class="form-control" placeholder="Image Url.." />
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
@@ -185,20 +185,20 @@
         const movieEdit = await fetch("https://striveschool-api.herokuapp.com/api/movies/" + movieCategory, {
           method: "GET",
           headers: {
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmEzM2RmMDdmZmQ0OTAwMTU4YTdhOWEiLCJpYXQiOjE2NTQ4NjUzOTMsImV4cCI6MTY1NjA3NDk5M30.2OFqiZlYFI8_pway6VuyyVMq_FoFqoK3aOgNgDlGntw",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmEzNDM5MzdmZmQ0OTAwMTU4YTdhOWMiLCJpYXQiOjE2NTUyMDM2MTMsImV4cCI6MTY1NjQxMzIxM30.ozVgl19lKNBmQ3TeP-LfrHL4ak2PqE9Lj3nhDMHEg0k",
 
           }
         })
 
         const response = await movieEdit.json()
 
-        const foundMovie = response.filter((singleMovie) => { return singleMovie._id === movieId })[0]
-        console.log(foundMovie)
+        const getMovie = response.filter((singleMovie) => { return singleMovie._id === movieId })[0]
+        console.log(getMovie)
 
 
-        let inputsAll = document.querySelectorAll("input")
-        inputsAll.forEach((input) => {
-          input.value = foundMovie[input.id]
+        let allInputs = document.querySelectorAll("input")
+        allInputs.forEach((input) => {
+          input.value = getMovie[input.id]
         })
       } catch (err) {
         console.log(err)
@@ -207,22 +207,7 @@
 
 
 
-    /* window.onload = (event) => {
-      const category = new URLSearchParams(window.location.search).get("category")
-      const name = new URLSearchParams(window.location.search).get("name")
-      const description = new URLSearchParams(window.location.search).get("description")
-      const imageUrl = new URLSearchParams(window.location.search).get("imageUrl")
 
-
-
-      document.getElementById("category").value = category
-      document.getElementById("name").value = name
-
-      document.getElementById("description").value = description
-      document.getElementById("imageUrl").value = imageUrl
-
-
-    } */
 
 
 
