@@ -60,7 +60,7 @@
     </nav>
   </div>
 
-  <div class="container mb-4">
+  <!-- <div class="container mb-4">
     <div class="d-flex ml-2 align-items-center">
       <h1>TV Shows</h1>
       <div class="dropdown d-inline-block mx-4">
@@ -82,33 +82,33 @@
         <i class="bi bi-filter-square selected-icons"></i>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <form onsubmit="attachMovies(event)">
           <div class="form-group">
             <label for="name">movie name</label>
-            <input id="name" type="text" class="form-control" placeholder="text..." />
+            <input id="name" type="text" class="form-control" placeholder="Movie Name..." />
           </div>
           <div class="form-group">
             <label for="description">Description</label>
-            <input id="description" type="text" class="form-control" placeholder="text.." />
+            <input id="description" type="text" class="form-control" placeholder="Description..." />
           </div>
           <div class="form-group">
             <label for="category">category</label>
-            <input id="category" type="text" class="form-control" placeholder="text.." />
+            <input id="category" type="text" class="form-control" placeholder="Genre..." />
           </div>
           <div class="form-group">
             <label for="imageUrl">Image URL</label>
-            <input id="imageUrl" type="text" class="form-control" placeholder="text.." />
+            <input id="imageUrl" type="text" class="form-control" placeholder="Image Url.." />
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
-          <button type="submit" class="btn btn-danger" onclick="deleteMovie()">
+          <button type="button" class="btn btn-danger" onclick="deleteMovie()">
             Delete
           </button>
-          <button type="submit" class="btn btn-secondary" onclick="editOptions()">
+          <button type="button" class="btn btn-secondary" onclick="editOptions()">
             Edit
           </button>
         </form>
@@ -151,11 +151,11 @@
       }
     };
 
+    // DELETE Method
+
     const movieId = new URLSearchParams(window.location.search).get("_id");
 
-    const movieCategory = new URLSearchParams(window.location.search).get(
-      "category"
-    );
+    const movieCategory = new URLSearchParams(window.location.search).get("category");
 
     const deleteMovie = async () => {
       try {
@@ -178,6 +178,56 @@
       }
     };
 
+    //Display data on Edit
+
+    window.onload = async () => {
+      try {
+        const movieEdit = await fetch("https://striveschool-api.herokuapp.com/api/movies/" + movieCategory, {
+          method: "GET",
+          headers: {
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmEzM2RmMDdmZmQ0OTAwMTU4YTdhOWEiLCJpYXQiOjE2NTQ4NjUzOTMsImV4cCI6MTY1NjA3NDk5M30.2OFqiZlYFI8_pway6VuyyVMq_FoFqoK3aOgNgDlGntw",
+
+          }
+        })
+
+        const response = await movieEdit.json()
+
+        const foundMovie = response.filter((singleMovie) => { return singleMovie._id === movieId })[0]
+        console.log(foundMovie)
+
+
+        let inputsAll = document.querySelectorAll("input")
+        inputsAll.forEach((input) => {
+          input.value = foundMovie[input.id]
+        })
+      } catch (err) {
+        console.log(err)
+      }
+    }
+
+
+
+    /* window.onload = (event) => {
+      const category = new URLSearchParams(window.location.search).get("category")
+      const name = new URLSearchParams(window.location.search).get("name")
+      const description = new URLSearchParams(window.location.search).get("description")
+      const imageUrl = new URLSearchParams(window.location.search).get("imageUrl")
+
+
+
+      document.getElementById("category").value = category
+      document.getElementById("name").value = name
+
+      document.getElementById("description").value = description
+      document.getElementById("imageUrl").value = imageUrl
+
+
+    } */
+
+
+
+    // PUT Method
+
     const editOptions = async () => {
       try {
         const movies = {
@@ -188,7 +238,7 @@
         };
 
         const movieEdit = await fetch(
-          "https://striveschool-api.herokuapp.com/api/movies/62a875886f53e1001572480b",
+          "https://striveschool-api.herokuapp.com/api/movies/" + movieId,
           {
             method: "PUT",
             body: JSON.stringify(movies),
@@ -201,15 +251,20 @@
         );
         const response = await movieEdit.json();
 
-        const selectedMovie = response.filter((firstMovie) => { return firstMovie._id === movieId })[0];
-        console.log(selectedMovie);
+        /* const selectedMovie = response.filter((firstMovie) => { return firstMovie._id === movieId })[0];
+        console.log(selectedMovie); */
       } catch (error) {
         console.log(error);
       }
     };
+
+    window.onload = () => {
+
+
+    };
+
+
   </script>
 </body>
 
 </html>
-
-<!-- 62a875886f53e1001572480b -->

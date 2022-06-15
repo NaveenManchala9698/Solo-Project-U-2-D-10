@@ -62,7 +62,7 @@
     </nav>
   </div>
 
-  <div class="container mb-4">
+  <!--  <div class="container mb-4">
     <div class="d-flex ml-2 align-items-center">
       <h1>TV Shows</h1>
       <div class="dropdown d-inline-block mx-4">
@@ -85,7 +85,7 @@
       </div>
     </div>
   </div>
-
+ -->
   <div class="container">
     <h1>Adventure</h1>
     <div class="row" id="adventure"></div>
@@ -93,12 +93,12 @@
 
   <div class="container">
     <h1>Action</h1>
-    <div class="row" id="action"></div>
+    <div class="row mt-2" id="action"></div>
   </div>
 
   <div class="container">
     <h1>Animated Movies</h1>
-    <div class="row" id="animated"></div>
+    <div class="row mt-2" id="animated"></div>
   </div>
 
   <div class="container d-flex justify-content-center">
@@ -161,9 +161,9 @@
 
         movies.forEach((movie) => {
           const adventuremovies = document.getElementById(`${category}`);
-          adventuremovies.innerHTML += `<div class="col-md-2">
+          adventuremovies.innerHTML += `<div class="col-md-2 pr-0">
                                             <a href="/backoffice.html?_id=${movie._id}&category=${movie.category}">
-                                              <div class="card mt-4">
+                                              <div class="card mb-3">
                                                 <img src="${movie.imageUrl}" class="card-img-top posters" alt="..." style: height=200px width=auto>
                                                   <div class="card-body">
                                                   <h5 class="card-title">${movie.name}</h5>
