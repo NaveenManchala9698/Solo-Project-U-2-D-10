@@ -62,7 +62,7 @@
     </nav>
   </div>
 
-  <!--  <div class="container mb-4">
+  <div class="container mb-4">
     <div class="d-flex ml-2 align-items-center">
       <h1>TV Shows</h1>
       <div class="dropdown d-inline-block mx-4">
@@ -71,11 +71,10 @@
           Genres
         </button>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Adventure</a>
-          <a class="dropdown-item" href="#">Sitcom</a>
-          <a class="dropdown-item" href="#">Science Fiction</a>
-          <a class="dropdown-item" href="#">Anime</a>
+          <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#actionMovies">Action</a>
+          <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#adventureMovies">Adventure</a>
+          <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#sitcomMovies">Sit-Com</a>
+          <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#animatedMovies">Animated</a>
         </div>
       </div>
 
@@ -85,21 +84,36 @@
       </div>
     </div>
   </div>
- -->
-  <div class="container">
-    <h1>Adventure</h1>
-    <div class="row" id="adventure"></div>
-  </div>
 
-  <div class="container">
-    <h1>Action</h1>
-    <div class="row mt-2" id="action"></div>
-  </div>
+  <section class="" id="animatedMovies">
+    <div class="container">
+      <h1>Animated Movies</h1>
+      <div class="row mt-2" id="animated"></div>
+    </div>
+  </section>
 
-  <div class="container">
-    <h1>Animated Movies</h1>
-    <div class="row mt-2" id="animated"></div>
-  </div>
+  <section class="" id="adventureMovies">
+    <div class="container">
+      <h1>Adventure</h1>
+      <div class="row" id="adventure"></div>
+    </div>
+  </section>
+
+  <section class="" id="sitcomMovies">
+    <div class="container">
+      <h1>Sit-Com</h1>
+      <div class="row" id="sitcom"></div>
+    </div>
+  </section>
+
+  <section class="" id="actionMovies">
+    <div class="container">
+      <h1>Action</h1>
+      <div class="row mt-2" id="action"></div>
+    </div>
+  </section>
+
+
 
   <div class="container d-flex justify-content-center">
     <footer class="mt-5">
@@ -163,8 +177,8 @@
           const adventuremovies = document.getElementById(`${category}`);
           adventuremovies.innerHTML += `<div class="col-md-2 pr-0">
                                             <a href="/backoffice.html?_id=${movie._id}&category=${movie.category}">
-                                              <div class="card mb-3">
-                                                <img src="${movie.imageUrl}" class="card-img-top posters" alt="..." style: height=200px width=auto>
+                                              <div class="card mt-3">
+                                                <img src="${movie.imageUrl}" class="card-img-top posters" alt="...">
                                                   <div class="card-body">
                                                   <h5 class="card-title">${movie.name}</h5>
                                                   <p class="card-text">${movie.description}</p>
@@ -181,6 +195,7 @@
       attachMovies("adventure");
       attachMovies("action");
       attachMovies("animated");
+      attachMovies("sitcom")
     };
   </script>
 </body>

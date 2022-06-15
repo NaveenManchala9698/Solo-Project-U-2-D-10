@@ -146,6 +146,7 @@
           "https://striveschool-api.herokuapp.com/api/movies",
           options
         );
+        window.location.assign("./index.html")
       } catch (error) {
         console.log(error);
       }
@@ -173,6 +174,7 @@
           "https://striveschool-api.herokuapp.com/api/movies/" + movieId,
           options
         );
+        window.location.assign("./index.html")
       } catch (error) {
         console.log(error);
       }
@@ -235,17 +237,13 @@
           }
         );
         const response = await movieEdit.json();
+        window.location.assign("./index.html")
 
         /* const selectedMovie = response.filter((firstMovie) => { return firstMovie._id === movieId })[0];
         console.log(selectedMovie); */
       } catch (error) {
         console.log(error);
       }
-    };
-
-    window.onload = () => {
-
-
     };
 
 
